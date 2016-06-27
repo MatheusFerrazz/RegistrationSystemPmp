@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.modelo;
+package br.com.registrationsystempmp.modelo;
 
 /**
  *
@@ -24,6 +24,13 @@ public class Funcionario {
     private String username;
     private String acesso;
 
+    @Override
+    public String toString() {
+        return "Funcionario{" + "idfuncion\u00e1rio=" + idfuncionário + ", nome=" + nome + ", secretaria=" + secretaria + ", vinculo=" + vinculo + ","
+                + " setor=" + setor + ", identificacao=" + identificacao + ", endereco=" + endereco + ", numero=" + numero + ", bairro=" + bairro + ","
+                + " cidade=" + cidade + ", telefone=" + telefone + ", username=" + username + ", acesso=" + acesso + '}';
+    }
+      
     public long getIdfuncionário() {
         return idfuncionário;
     }

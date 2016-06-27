@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Registration System PMP</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <form class="form-horizontal">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>CADASTRO FUNCIONÁRIO</legend>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="nome">Nome</label>  
+                    <div class="col-md-6">
+                        <input id="nome" name="nome" placeholder="Nome" class="form-control input-md" required="" type="text">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="secretaria">Secretaria/Órgão</label>  
+                    <div class="col-md-4">
+                        <input id="secretaria" name="secretaria" placeholder="Secretaria ou órgão" class="form-control input-md" required="" type="text">
+
+                    </div>
+                </div>
+
+                <!-- Multiple Radios -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="vinculo">Vínculo com a Prefeitura</label>
+                    <div class="col-md-4">
+                        <div class="radio">
+                            <label for="vinculo-0">
+                                <input name="vinculo" id="vinculo-0" value="funcionario" checked="checked" type="radio">
+                                Funcionário
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label for="vinculo-1">
+                                <input name="vinculo" id="vinculo-1" value="comissionado" type="radio">
+                                Comissionado
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label for="vinculo-2">
+                                <input name="vinculo" id="vinculo-2" value="estagiario" type="radio">
+                                Estagiário
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label for="vinculo-3">
+                                <input name="vinculo" id="vinculo-3" value="outros" type="radio">
+                                Outros
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="setor">Setor</label>  
+                    <div class="col-md-4">
+                        <input id="setor" name="setor" placeholder="Setor" class="form-control input-md" required="" type="text">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="identificacao">Doc Identificação (Matrícula ou R.G.)</label>  
+                    <div class="col-md-4">
+                        <input id="identificacao" name="identificacao" placeholder="Documento de Identificação" class="form-control input-md" required="" type="text">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="endereco">Endereço</label>  
+                    <div class="col-md-4">
+                        <input id="endereco" name="endereco" placeholder="Endereço" class="form-control input-md" required="" type="text">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="numero">N°</label>  
+                    <div class="col-md-4">
+                        <input id="N°" name="N°" placeholder="Número" class="form-control input-md" required="" type="text">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="bairro">Bairro</label>  
+                    <div class="col-md-4">
+                        <input id="bairro" name="bairro" placeholder="Bairro" class="form-control input-md" required="" type="text">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="cidade">Cidade</label>  
+                    <div class="col-md-4">
+                        <input id="cidade" name="cidade" placeholder="Cidade" class="form-control input-md" required="" type="text">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="telefone">Telefones</label>  
+                    <div class="col-md-4">
+                        <input id="telefone" name="telefone" placeholder="Telefones" class="form-control input-md" required="" type="text">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="username">Nome pretendido para conta (username)</label>  
+                    <div class="col-md-4">
+                        <input id="username" name="username" placeholder="Username" class="form-control input-md" required="" type="text">
+
+                    </div>
+                </div>
+
+                <!-- Multiple Radios -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="acesso">Tipo de acesso</label>
+                    <div class="col-md-4">
+                        <div class="radio">
+                            <label for="acesso-0">
+                                <input name="acesso" id="acesso-0" value="1" checked="checked" type="radio">
+                                Normal
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label for="acesso-1">
+                                <input name="acesso" id="acesso-1" value="2" type="radio">
+                                Avançado
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label for="acesso-2">
+                                <input name="acesso" id="acesso-2" value="3" type="radio">
+                                Especial
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="enviar">Enviar</label>
+                    <div class="col-md-4">
+                        <button id="enviar" name="enviar" class="btn btn-success">Enviar</button>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+
+    </body>
+</html>
