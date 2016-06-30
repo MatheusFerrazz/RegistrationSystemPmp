@@ -10,7 +10,7 @@ package br.com.registrationsystempmp.modelo;
  * @author Matheus
  */
 public class Funcionario {
-    private long idfuncionário;
+    private long idfuncionario;
     private String nome;
     private String secretaria;
     private String vinculo;
@@ -26,17 +26,17 @@ public class Funcionario {
 
     @Override
     public String toString() {
-        return "Funcionario{" + "idfuncion\u00e1rio=" + idfuncionário + ", nome=" + nome + ", secretaria=" + secretaria + ", vinculo=" + vinculo + ","
+        return "Funcionario{" + "idfuncion\u00e1rio=" + idfuncionario + ", nome=" + nome + ", secretaria=" + secretaria + ", vinculo=" + vinculo + ","
                 + " setor=" + setor + ", identificacao=" + identificacao + ", endereco=" + endereco + ", numero=" + numero + ", bairro=" + bairro + ","
                 + " cidade=" + cidade + ", telefone=" + telefone + ", username=" + username + ", acesso=" + acesso + '}';
     }
       
-    public long getIdfuncionário() {
-        return idfuncionário;
+    public long getIdfuncionario() {
+        return idfuncionario;
     }
 
-    public void setIdfuncionário(long idfuncionário) {
-        this.idfuncionário = idfuncionário;
+    public void setIdfuncionario(long idfuncionario) {
+        this.idfuncionario = idfuncionario;
     }
 
     public String getNome() {
