@@ -68,7 +68,7 @@ public class Controlador extends HttpServlet {
                 } else {
                     dao.inserir(funcionario);
                 }
-                RequestDispatcher dispatcher = request.getRequestDispatcher("funcionario.jsp");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("cadastro-funcionario.html");
                 dispatcher.forward(request, response);
             } catch (SQLException e) {
                 e.printStackTrace();

@@ -62,7 +62,7 @@ public class FuncionarioDAO implements DAO<Funcionario> {
 
     @Override
     public void editar(Funcionario entidade) throws SQLException {
-        String sql = "update pessoa set";
+        String sql = "update funcionario set";
         int t = 0;
         int count = 1;
         if (entidade.getNome() != null && !entidade.getNome().equals("")) {
