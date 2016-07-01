@@ -5,11 +5,17 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <html>
+    <script type="text/javascript">
+        function cadastrar() {
+            document.getElementById("action").value = "cadastrar";
+        }
+    </script>
     <head>
         <title>Registration System PMP</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="shortcut icon" type="image/x-icon" href="imagens/favicon.ico">
     </head>
     <body>
         <form class="form-horizontal">
@@ -168,10 +174,23 @@ and open the template in the editor.
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="enviar">Enviar</label>
                     <div class="col-md-4">
-                        <button id="enviar" name="enviar" class="btn btn-success">Enviar</button>
+                        <button id="enviar" name="enviar" value="cadastrar" onclick="cadastrar();" class="btn btn-success">Cadastrar</button>
                     </div>
                 </div>
-
+                <!-- Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="enviar">Deletar</label>
+                    <div class="col-md-4">
+                        <button id="deletar" name="enviar" value="deletar" onclick="deletar();" class="btn btn-danger">Deletar</button>
+                    </div>
+                </div>
+                <!-- Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="enviar"></label>
+                    <div class="col-md-4">
+                        <button id="voltar" name="voltar" value="voltar"  class="btn btn-link"><a href="index.html">Voltar</a></button>
+                    </div>
+                </div>
             </fieldset>
         </form>
 
