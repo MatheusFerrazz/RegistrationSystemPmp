@@ -24,6 +24,9 @@ public class Funcionario {
     private String username;
     private String acesso;
 
+    public Funcionario() {
+    }
+           
     @Override
     public String toString() {
         return "Funcionario{" + "idfuncion\u00e1rio=" + idfuncionario + ", nome=" + nome + ", secretaria=" + secretaria + ", vinculo=" + vinculo + ","

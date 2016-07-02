@@ -19,7 +19,7 @@ public class DBConnection {
         try{
             Class.forName("com.mysql.jdbc.Driver");
             return 
-                    (Connection) DriverManager.getConnection("jdbc:mysql://localhost/SistemaPMP","root","");
+                    (Connection) DriverManager.getConnection("jdbc:mysql://localhost/sistemapmp","root","");
             
         }catch(SQLException e){
             throw new RuntimeException(e);

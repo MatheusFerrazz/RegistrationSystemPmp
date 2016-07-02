@@ -15,10 +15,11 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
         <link rel="shortcut icon" type="image/x-icon" href="imagens/favicon.ico">
     </head>
     <body>
-        <form class="form-horizontal" action="Controlador" method="post">
+        <form class="form-horizontal" action="ControladorServlet" method="post">
             <fieldset>
 
                 <!-- Form Name -->
@@ -48,30 +49,37 @@ and open the template in the editor.
                     <div class="col-md-4">
                         <div class="radio">
                             <label for="vinculo-0">
-                                <input name="vinculo" id="vinculo-0" value="funcionario" checked="checked" type="radio">
+                                <input name="vinculo" id="vinculo-0" value="Funcionario" checked="checked" type="radio">
                                 Funcionário
                             </label>
                         </div>
                         <div class="radio">
                             <label for="vinculo-1">
-                                <input name="vinculo" id="vinculo-1" value="comissionado" type="radio">
+                                <input name="vinculo" id="vinculo-1" value="Comissionado" type="radio">
                                 Comissionado
                             </label>
                         </div>
                         <div class="radio">
                             <label for="vinculo-2">
-                                <input name="vinculo" id="vinculo-2" value="estagiario" type="radio">
+                                <input name="vinculo" id="vinculo-2" value="Estagiario" type="radio">
                                 Estagiário
                             </label>
                         </div>
                         <div class="radio">
                             <label for="vinculo-3">
-                                <input name="vinculo" id="vinculo-3" value="outros" type="radio">
+                                <input name="vinculo" id="vinculo-3" value="Outros" type="radio">
                                 Outros
                             </label>
                         </div>
                     </div>
                 </div>
+                <!--                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="vinculo">Vínculo com a Prefeitura</label>  
+                                    <div class="col-md-4">
+                                        <input id="vinculo" name="vinculo" placeholder="Vinculo" class="form-control input-md" required="" type="text">
+                
+                                    </div>
+                                </div>-->
 
                 <!-- Text input-->
                 <div class="form-group">
@@ -102,9 +110,9 @@ and open the template in the editor.
 
                 <!-- Text input-->
                 <div class="form-group">
-                    <label class="col-md-4 control-label" for="numero">N°</label>  
+                    <label class="col-md-4 control-label" for="numero">Número</label>  
                     <div class="col-md-4">
-                        <input id="N°" name="N°" placeholder="Número" class="form-control input-md" required="" type="text">
+                        <input id="numero" name="numero" placeholder="Número da Localidade" class="form-control input-md" required="" type="text">
 
                     </div>
                 </div>
@@ -151,24 +159,31 @@ and open the template in the editor.
                     <div class="col-md-4">
                         <div class="radio">
                             <label for="acesso-0">
-                                <input name="acesso" id="acesso-0" value="1" checked="checked" type="radio">
+                                <input name="acesso" id="acesso-0" value="Normal" checked="checked" type="radio">
                                 Normal
                             </label>
                         </div>
                         <div class="radio">
                             <label for="acesso-1">
-                                <input name="acesso" id="acesso-1" value="2" type="radio">
+                                <input name="acesso" id="acesso-1" value="Avancado" type="radio">
                                 Avançado
                             </label>
                         </div>
                         <div class="radio">
                             <label for="acesso-2">
-                                <input name="acesso" id="acesso-2" value="3" type="radio">
+                                <input name="acesso" id="acesso-2" value="Especial" type="radio">
                                 Especial
                             </label>
                         </div>
                     </div>
                 </div>
+                <!--                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="acesso">Tipo de acesso</label>  
+                                    <div class="col-md-4">
+                                        <input id="acesso" name="acesso" placeholder="Acesso" class="form-control input-md" required="" type="text">
+                
+                                    </div>
+                                </div>-->
 
                 <!-- Button -->
                 <div class="form-group">
@@ -179,18 +194,19 @@ and open the template in the editor.
                 </div>
                 <!-- Button -->
                 <div class="form-group">
-                    <label class="col-md-4 control-label" for="enviar">Deletar</label>
+                    <label class="col-md-4 control-label" for="deletar">Deletar</label>
                     <div class="col-md-4">
                         <button id="deletar" name="enviar" value="deletar" onclick="deletar();" class="btn btn-danger">Deletar</button>
                     </div>
                 </div>
                 <!-- Button -->
                 <div class="form-group">
-                    <label class="col-md-4 control-label" for="enviar"></label>
+                    <label class="col-md-4 control-label" for="voltar"></label>
                     <div class="col-md-4">
-                        <button id="voltar" name="voltar" value="voltar"  class="btn btn-link"><a href="index.html">Voltar</a></button>
+                        <a href="index.html"  class="btn btn-success btn-large active"><span class="glyphicon glyphicon-circle-arrow-left"></span><center>Voltar</center></a>
                     </div>
                 </div>
+
             </fieldset>
         </form>
 

@@ -44,13 +44,15 @@ public class FuncionarioDAO implements DAO<Funcionario> {
             stmt.setString(5, entidade.getIdentificacao());
             stmt.setString(6, entidade.getEndereco());
             stmt.setString(7, entidade.getNumero());
-            stmt.setString(9, entidade.getBairro());
-            stmt.setString(10, entidade.getSecretaria());
-            stmt.setString(11, entidade.getCidade());
-            stmt.setString(12, entidade.getTelefone());
-            stmt.setString(13, entidade.getUsername());
-            stmt.setString(14, entidade.getAcesso());
-
+            stmt.setString(8, entidade.getBairro());
+            stmt.setString(9, entidade.getCidade());
+            stmt.setString(10, entidade.getTelefone());
+            stmt.setString(11, entidade.getUsername());
+            stmt.setString(12, entidade.getAcesso());
+            
+            stmt.executeUpdate();
+            con.close();
+            
         } catch (SQLException e) {
             throw new RuntimeException(e);
         } finally {
@@ -278,7 +280,7 @@ public class FuncionarioDAO implements DAO<Funcionario> {
 
             while (rs.next()) {
                 entidade = new Funcionario();
-                entidade.setIdfuncionario(rs.getLong("id"));
+                entidade.setIdfuncionario(rs.getLong("idfuncionario"));
                 entidade.setNome(rs.getString("nome"));
                 entidade.setSecretaria(rs.getString("secretaria"));
                 entidade.setVinculo(rs.getString("vinculo"));
@@ -302,7 +304,7 @@ public class FuncionarioDAO implements DAO<Funcionario> {
             rs.close();
         }
 
-        return null;
+        return funcionarios;
 
     }
 }
