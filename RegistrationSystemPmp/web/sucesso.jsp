@@ -20,7 +20,7 @@
         <!-- Button -->
         <div>
             <div class="btn-group btn-group-vertical">
-                <a href="index.html" class="btn btn-success btn-large active"><span class="glyphicon glyphicon-circle-arrow-left"></span><center>Voltar</center></a>
+                <a href="index.html" class="btn btn-success btn-large active"><span class="glyphicon glyphicon-circle-arrow-left"></span>Voltar</a>
             </div>
         </div>
 

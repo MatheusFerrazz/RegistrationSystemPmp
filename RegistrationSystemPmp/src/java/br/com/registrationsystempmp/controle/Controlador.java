@@ -16,11 +16,11 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Matheus
  */
-@WebServlet(name = "/Controlador", urlPatterns = {"/Controlador"})
+@WebServlet(urlPatterns = {"/Controlador"})
 public class Controlador extends HttpServlet {
 
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException, SQLException {
+    public void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         //Faz uma busca pela escrita write
 
         PrintWriter out = response.getWriter();
@@ -31,8 +31,8 @@ public class Controlador extends HttpServlet {
             //Busca parametros do request
             Integer id = 0;
 
-            if (request.getParameter("id") != null && !request.getParameter("id").equals("")) {
-                id = Integer.parseInt(request.getParameter("id"));
+            if (request.getParameter("idfuncionario") != null && !request.getParameter("idfuncionario").equals("")) {
+                id = Integer.parseInt(request.getParameter("idfuncionario"));
             }
             String nome = request.getParameter("nome");
             String secretaria = request.getParameter("secretaria");
@@ -68,16 +68,16 @@ public class Controlador extends HttpServlet {
                 } else {
                     dao.inserir(funcionario);
                 }
-                RequestDispatcher dispatcher = request.getRequestDispatcher("cadastro-funcionario.html");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("exluir.jsp");
                 dispatcher.forward(request, response);
             } catch (SQLException e) {
                 e.printStackTrace();
             }
 
-        } else if (action != null && action.equals("excluir")) {
+        } else if (action != null && action.equals("deletar")) {
             Integer id = 0;
-            if (request.getParameter("id") != null && !request.getParameter("id").equals("")) {
-                id = Integer.parseInt(request.getParameter("id"));
+            if (request.getParameter("idfuncionario") != null && !request.getParameter("idfuncionario").equals("")) {
+                id = Integer.parseInt(request.getParameter("idfuncionario"));
 
             }
             Funcionario funcionario = new Funcionario();
@@ -85,7 +85,7 @@ public class Controlador extends HttpServlet {
 
             try {
                 dao.deletar(funcionario);
-                RequestDispatcher dispatcher = request.getRequestDispatcher("funcionario.jsp");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("excluir.jsp");
                 dispatcher.forward(request, response);
 
             } catch (SQLException e) {
@@ -94,7 +94,7 @@ public class Controlador extends HttpServlet {
             }
 
         } else {
-            RequestDispatcher dispatcher = request.getRequestDispatcher("funcionario.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("excluir.jsp");
             dispatcher.forward(request, response);
         }
 
