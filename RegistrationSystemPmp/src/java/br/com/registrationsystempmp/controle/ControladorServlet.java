@@ -35,13 +35,7 @@ public class ControladorServlet extends HttpServlet {
         FuncionarioDAO dao = new FuncionarioDAO();
         String action = request.getParameter("action");
 
-//        if (action != null && action.equals("cadastrar")) {
-//            //Busca parametros do request
-//            Integer id = 0;
-//
-//            if (request.getParameter("id") != null && !request.getParameter("id").equals("")) {
-//                id = Integer.parseInt(request.getParameter("id"));
-//            }
+
         String nome = request.getParameter("nome");
         String secretaria = request.getParameter("secretaria");
         String vinculo = request.getParameter("vinculo");
@@ -74,43 +68,7 @@ public class ControladorServlet extends HttpServlet {
             dao.inserir(funcionario);
             RequestDispatcher dispatcher = request.getRequestDispatcher("sucesso.jsp");
             dispatcher.forward(request, response);
-        } //            try {
-        //                if (id != null && id > 0) {
-        //                    funcionario.setIdfuncionario(new Long(id));
-        //                    dao.editar(funcionario);
-        //
-        //                } else {
-        //                    dao.inserir(funcionario);
-        //                }
-        //                RequestDispatcher dispatcher = request.getRequestDispatcher("sucesso.jsp");
-        //                dispatcher.forward(request, response);
-        //            } catch (SQLException e) {
-        //                e.printStackTrace();
-        //            }
-        //
-        //        } else if (action != null && action.equals("excluir")) {
-        //            Integer id = 0;
-        //            if (request.getParameter("id") != null && !request.getParameter("id").equals("")) {
-        //                id = Integer.parseInt(request.getParameter("id"));
-        //
-        //            }
-        //            Funcionario funcionario = new Funcionario();
-        //            funcionario.setIdfuncionario(new Long(id));
-        //
-        //            try {
-        //                dao.deletar(funcionario);
-        //                RequestDispatcher dispatcher = request.getRequestDispatcher("sucesso.jsp");
-        //                dispatcher.forward(request, response);
-        //
-        //            } catch (SQLException e) {
-        //                e.printStackTrace();
-        //
-        //            }
-        //
-        //        } else {
-        //            RequestDispatcher dispatcher = request.getRequestDispatcher("sucesso.jsp");
-        //            dispatcher.forward(request, response);
-        //        }
+        } 
         catch (SQLException ex) {
             Logger.getLogger(ControladorServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
